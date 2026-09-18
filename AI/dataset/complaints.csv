@@ -1,0 +1,124 @@
+complaint_text,category,location,priority
+Ambulance stuck in heavy traffic and needs immediate clearance,Traffic,Chennai,HIGH
+Major accident blocking the main road,Traffic,Chennai,HIGH
+Fire emergency reported near residential area,Traffic,Salem,HIGH
+Dangerous traffic congestion blocking emergency vehicles,Traffic,Tambaram,HIGH
+Traffic signal not working during peak hours,Traffic,Chennai,MEDIUM
+Heavy traffic causing long delays,Traffic,Coimbatore,MEDIUM
+Road signal malfunction reported,Traffic,Salem,MEDIUM
+Vehicles are causing congestion near the junction,Traffic,Tambaram,MEDIUM
+Minor traffic issue near the bus stand,Traffic,Salem,LOW
+Street traffic sign is slightly damaged,Traffic,Chennai,LOW
+Garbage dump creating serious health risk near houses,Waste,Chennai,HIGH
+Waste collection has stopped and garbage is overflowing,Waste,Salem,HIGH
+Large amount of garbage blocking the road,Waste,Coimbatore,HIGH
+Garbage has not been collected for several days,Waste,Tambaram,MEDIUM
+Waste bins are overflowing near the market,Waste,Chennai,MEDIUM
+Garbage collection is delayed,Waste,Salem,MEDIUM
+Dustbin is full and needs collection,Waste,Coimbatore,MEDIUM
+Garbage pickup was missed today,Waste,Tambaram,LOW
+Small amount of waste near the street,Waste,Salem,LOW
+Dustbin needs routine cleaning,Waste,Chennai,LOW
+Major water pipeline burst flooding the road,Water,Chennai,HIGH
+Water leakage is causing flooding near houses,Water,Salem,HIGH
+No drinking water available in the residential area,Water,Coimbatore,HIGH
+Severe water shortage reported in the locality,Water,Tambaram,HIGH
+Water pipeline leakage reported on the street,Water,Chennai,MEDIUM
+Water supply is irregular,Water,Salem,MEDIUM
+Public tap is leaking continuously,Water,Coimbatore,MEDIUM
+Low water pressure in the neighborhood,Water,Tambaram,MEDIUM
+Small tap leakage near the house,Water,Salem,LOW
+Minor water supply issue reported,Water,Chennai,LOW
+Electrical pole has fallen and live wires are exposed,Electricity,Chennai,HIGH
+Major power failure affecting the entire area,Electricity,Salem,HIGH
+Dangerous electrical wire hanging across the road,Electricity,Coimbatore,HIGH
+Transformer failure causing complete power outage,Electricity,Tambaram,HIGH
+Street lights are not working on a major road,Electricity,Chennai,MEDIUM
+Power outage reported in the neighborhood,Electricity,Salem,MEDIUM
+Several street lights are malfunctioning,Electricity,Coimbatore,MEDIUM
+Electrical connection problem reported,Electricity,Tambaram,MEDIUM
+One street light is not working,Electricity,Salem,LOW
+Minor electrical maintenance required,Electricity,Chennai,LOW
+Ambulance delayed because vehicles are blocking the emergency lane,Traffic,Coimbatore,HIGH
+Traffic accident causing complete road blockage,Traffic,Salem,HIGH
+Emergency vehicle unable to pass due to severe congestion,Traffic,Chennai,HIGH
+Broken traffic signal creating a dangerous intersection,Traffic,Tambaram,HIGH
+Traffic jam completely blocking access to the hospital,Traffic,Coimbatore,HIGH
+Multiple vehicles involved in a serious road accident,Traffic,Salem,HIGH
+Emergency route blocked by uncontrolled traffic,Traffic,Chennai,HIGH
+Road intersection is dangerously congested during rush hour,Traffic,Tambaram,HIGH
+Traffic signal is flickering and causing confusion,Traffic,Coimbatore,MEDIUM
+Traffic congestion increasing near the railway station,Traffic,Salem,MEDIUM
+Signal timing problem causing unnecessary delays,Traffic,Chennai,MEDIUM
+Several vehicles are waiting due to signal malfunction,Traffic,Tambaram,MEDIUM
+Traffic is moving slowly near the school area,Traffic,Coimbatore,MEDIUM
+Road sign is damaged and difficult to read,Traffic,Salem,MEDIUM
+Junction signal requires maintenance,Traffic,Chennai,MEDIUM
+Moderate congestion reported near the market road,Traffic,Tambaram,MEDIUM
+A few vehicles are causing a small traffic delay,Traffic,Coimbatore,LOW
+One road sign needs minor repair,Traffic,Salem,LOW
+Traffic is slightly slow near the residential street,Traffic,Chennai,LOW
+Minor issue with a roadside direction board,Traffic,Tambaram,LOW
+
+Garbage accumulation creating an unhygienic environment, Waste,Chennai,HIGH
+Uncollected waste is attracting dangerous insects near homes,Waste,Salem,HIGH
+Garbage pile completely blocking the roadside,Waste,Coimbatore,HIGH
+Large waste accumulation causing serious public health concerns,Waste,Tambaram,HIGH
+Overflowing garbage is creating a severe sanitation problem,Waste,Chennai,HIGH
+Waste dumping is blocking access to the main street,Waste,Salem,HIGH
+Garbage has remained uncollected for many days,Waste,Coimbatore,HIGH
+Large quantity of waste is spreading across the road,Waste,Tambaram,HIGH
+Waste bins are overflowing near the bus stop,Waste,Chennai,MEDIUM
+Garbage collection is delayed in the residential area,Waste,Salem,MEDIUM
+Public dustbins need immediate routine collection,Waste,Coimbatore,MEDIUM
+Waste has accumulated around the market area,Waste,Tambaram,MEDIUM
+Garbage collection vehicle has missed the scheduled pickup,Waste,Chennai,MEDIUM
+Several bins are almost full near the street,Waste,Salem,MEDIUM
+Waste disposal service is irregular this week,Waste,Coimbatore,MEDIUM
+Dustbins require cleaning and regular maintenance,Waste,Tambaram,MEDIUM
+Small quantity of garbage found near the sidewalk,Waste,Chennai,LOW
+A few waste items are lying beside the road,Waste,Salem,LOW
+Dustbin needs normal routine cleaning,Waste,Coimbatore,LOW
+Minor littering reported near the residential area,Waste,Tambaram,LOW
+
+Water pipeline has burst and is flooding several streets,Water,Chennai,HIGH
+Severe water leakage is damaging the road surface,Water,Salem,HIGH
+Residential area has no water supply during an emergency,Water,Coimbatore,HIGH
+Major pipeline damage is causing extensive water loss,Water,Tambaram,HIGH
+Water shortage is affecting many households,Water,Chennai,HIGH
+Large pipeline rupture reported near the main road,Water,Salem,HIGH
+Contaminated water is affecting the residential locality,Water,Coimbatore,HIGH
+Severe flooding caused by a broken water main,Water,Tambaram,HIGH
+Water pipe is leaking continuously near the street,WATER,Chennai,MEDIUM
+Water supply pressure has decreased in the neighborhood,Water,Salem,MEDIUM
+Public water tap has developed a significant leak,Water,Coimbatore,MEDIUM
+Water supply is interrupted for several hours,Water,Tambaram,MEDIUM
+Pipeline leakage reported near the market,Water,Chennai,MEDIUM
+Irregular water supply affecting some houses,Water,Salem,MEDIUM
+Water pressure problem reported in the locality,Water,Coimbatore,MEDIUM
+Public tap requires maintenance due to leakage,Water,Tambaram,MEDIUM
+Small water leak noticed near a house,Water,Chennai,LOW
+Minor water pressure variation reported,Water,Salem,LOW
+Tap needs routine repair,Water,Coimbatore,LOW
+Small water supply inconvenience reported,Water,Tambaram,LOW
+
+Electrical transformer exploded and caused a dangerous outage,Electricity,Chennai,HIGH
+Live electrical cable has fallen onto the road,Electricity,Salem,HIGH
+Major electrical fault affecting multiple streets,Electricity,Coimbatore,HIGH
+Power failure is affecting essential services in the area,Electricity,Tambaram,HIGH
+Exposed wires creating immediate danger to pedestrians,Electricity,Chennai,HIGH
+Transformer malfunction causing widespread power outage,Electricity,Salem,HIGH
+Electrical pole damaged with wires hanging dangerously,Electricity,Coimbatore,HIGH
+Major short circuit reported in the residential area,Electricity,Tambaram,HIGH
+Several street lights are not functioning at night,Electricity,Chennai,MEDIUM
+Power supply is interrupted repeatedly in the neighborhood,Electricity,Salem,MEDIUM
+Electrical maintenance problem reported on the main street,Electricity,Coimbatore,MEDIUM
+Street lighting system is malfunctioning in several locations,Electricity,Tambaram,MEDIUM
+Power fluctuation reported by residents,Electricity,Chennai,MEDIUM
+Multiple lights require maintenance,Electricity,Salem,MEDIUM
+Electrical connection issue affecting one street,Electricity,Coimbatore,MEDIUM
+Street light repair is required near the junction,Electricity,Tambaram,MEDIUM
+One damaged street light needs replacement,Electricity,Chennai,LOW
+Minor electrical maintenance needed near the road,Electricity,Salem,LOW
+A single street light has stopped working,Electricity,Coimbatore,LOW
+Small electrical repair reported at a public location,Electricity,Tambaram,LOW

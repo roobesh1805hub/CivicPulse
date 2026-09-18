@@ -1,0 +1,284 @@
+
+========== COMPLAINT REPORT ==========
+
+-----------------------------------------
+Complaint ID : 1
+Citizen ID   : 1
+Category     : Water
+Title        : Water leakage
+Description  : water pipe broken
+Location     : Chennai
+Status       : Repaired
+Priority     : High
+Department   : null
+Suggestion   : Repair pipe
+AI Recommendation : null
+Date         : 2026-07-23
+
+-----------------------------------------
+Complaint ID : 2
+Citizen ID   : 2
+Category     : food
+Title        : food waste
+Description  : lot of food wastes
+Location     : Kanchipuram
+Status       : Resolved
+Priority     : med
+Department   : null
+Suggestion   : made it in small amount
+AI Recommendation : null
+Date         : 2026-07-23
+
+-----------------------------------------
+Complaint ID : 4
+Citizen ID   : 1
+Category     : Sound horn
+Title        : Noise pollution
+Description  : vehicles made loud noise by horn near hospital
+Location     : Madurai
+Status       : In Progress
+Priority     : High
+Department   : null
+Suggestion   : traffic signal 
+AI Recommendation : null
+Date         : 2026-07-23
+
+-----------------------------------------
+Complaint ID : 7
+Citizen ID   : 6
+Category     : Traffic
+Title        : Traffic signal not working
+Description  : Signal at the junction is not working
+Location     : Chennai
+Status       : 
+Priority     : High
+Department   : null
+Suggestion   : Repair the signal
+AI Recommendation : null
+Date         : 2026-09-10
+
+-----------------------------------------
+Complaint ID : 8
+Citizen ID   : 6
+Category     : Waste
+Title        : street garbages overflow
+Description  : garbages in street corners overflows and leads to a bad smell
+Location     : chennai
+Status       : high
+Priority     : high
+Department   : null
+Suggestion   : instruct the workers to clean and sanitize that area
+AI Recommendation : null
+Date         : 2026-09-10
+
+-----------------------------------------
+Complaint ID : 9
+Citizen ID   : 6
+Category     : Traffic
+Title        : Ambulance stuck in traffic
+Description  : Emergency ambulance cannot move because of heavy traffic
+Location     : Chennai Junction
+Status       : In Progress
+Priority     : HIGH
+Department   : null
+Suggestion   : null
+AI Recommendation : null
+Date         : 2026-09-10
+
+-----------------------------------------
+Complaint ID : 10
+Citizen ID   : 1
+Category     : Traffic
+Title        : Heavy Traffic
+Description  : Traffic congestion near junction
+Location     : Chennai
+Status       : Pending
+Priority     : MEDIUM
+Department   : null
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-10
+
+-----------------------------------------
+Complaint ID : 11
+Citizen ID   : 4
+Category     : traffic
+Title        : Traffic signal not working
+Description  : Signal is not functioning properly
+Location     : salem
+Status       : Pending
+Priority     : MEDIUM
+Department   : null
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-10
+
+-----------------------------------------
+Complaint ID : 12
+Citizen ID   : 4
+Category     : traffic
+Title        : accident
+Description  : traffic due to accident of highspeeding vehicle
+Location     : salem
+Status       : In Progress
+Priority     : HIGH
+Department   : null
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 13
+Citizen ID   : 6
+Category     : water
+Title        : tap broken
+Description  : tap broke due to its age
+Location     : tambaram
+Status       : Pending
+Priority     : MEDIUM
+Department   : null
+Suggestion   : Water department should inspect the reported leakage.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 14
+Citizen ID   : 1
+Category     : electricity
+Title        : shutdown
+Description  : shutdown due to transformer burst
+Location     : chromepet
+Status       : Pending
+Priority     : MEDIUM
+Department   : null
+Suggestion   : Electricity department should inspect the reported electrical issue.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 15
+Citizen ID   : 1
+Category     : traffic
+Title        : Ambulance stuck in traffic
+Description  : Ambulance is unable to move due to heavy traffic
+Location     : Main road
+Status       : Pending
+Priority     : HIGH
+Department   : null
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 16
+Citizen ID   : 6
+Category     : traffic 
+Title        : Heavy traffic
+Description  : Traffic congestion near college
+Location     : Main road
+Status       : Pending
+Priority     : MEDIUM
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 17
+Citizen ID   : 1
+Category     : traffic
+Title        : Ambulance blocked
+Description  : Ambulance stuck due to traffic emergency
+Location     : Main road
+Status       : In Progress
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 18
+Citizen ID   : 8
+Category     : Electricity
+Title        : electricity scarcity
+Description  : electricity scarcity due to heavy usages by industries
+Location     : kodaikanal
+Status       : Pending
+Priority     : MEDIUM
+Department   : Electricity Department
+Suggestion   : Electricity department should inspect the reported electrical issue.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 19
+Citizen ID   : 7
+Category     : Traffic
+Title        : Ambulance stuck in traffic
+Description  : Emergency ambulance is stuck near the main road
+Location     : Salem Main road
+Status       : Pending
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-11
+
+-----------------------------------------
+Complaint ID : 20
+Citizen ID   : 1
+Category     : Traffic
+Title        : Ambulance stuck in traffic
+Description  : Ambulance is unable to move because of heavy traffic
+Location     : Chennai
+Status       : Pending
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-16
+
+-----------------------------------------
+Complaint ID : 21
+Citizen ID   : 4
+Category     : Traffic
+Title        : Ambulance stuck in traffic
+Description  : Ambulance is stuck in heavy traffic and cannot reach the hospital
+Location     : Chennai
+Status       : Pending
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-17
+
+-----------------------------------------
+Complaint ID : 22
+Citizen ID   : 2
+Category     : Traffic
+Title        : Ambulance stuck in traffic
+Description  : Ambulance is stuck in heavy traffic and cannot reach the hospital
+Location     : Tambaram
+Status       : Pending
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : null
+Date         : 2026-09-17
+
+-----------------------------------------
+Complaint ID : 23
+Citizen ID   : 4
+Category     : Traffic
+Title        : Ambulance stuck in heavy traffic
+Description  : Ambulance cannot reach the hospital because of severe traffic
+Location     : Chennai
+Status       : Pending
+Priority     : HIGH
+Department   : Traffic Department
+Suggestion   : Traffic control team should inspect the reported location.
+AI Recommendation : Immediately alert traffic control and clear the affected route.
+Date         : 2026-09-17
+
+=======================================
