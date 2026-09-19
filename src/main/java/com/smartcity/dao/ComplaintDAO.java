@@ -5,9 +5,12 @@ import com.smartcity.model.Complaint;
 import com.smartcity.utils.FileReportUtil;
 
 import java.sql.Connection;
+import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.ArrayList;
 
 public class ComplaintDAO {
 
@@ -22,9 +25,13 @@ public class ComplaintDAO {
                 "status, priority, suggestion, complaint_date, department, " +
                 "ai_recommendation) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
         try (
                 Connection con = DBConnection.getConnection();
-                PreparedStatement ps = con.prepareStatement(sql)
+                PreparedStatement ps = con.prepareStatement(
+                        sql,
+                        Statement.RETURN_GENERATED_KEYS
+                )
         ) {
 
             ps.setInt(1, complaint.getCitizenId());
@@ -43,11 +50,21 @@ public class ComplaintDAO {
 
             if (rows > 0) {
 
-                System.out.println(
-                        "Complaint Registered Successfully!"
-                );
+                try (ResultSet rs = ps.getGeneratedKeys()) {
 
-                return true;
+                    if (rs.next()) {
+
+                        int generatedId = rs.getInt(1);
+
+                        complaint.setComplaintId(generatedId);
+
+                        System.out.println(
+                                "Generated Complaint ID: " + generatedId
+                        );
+
+                        return true;
+                    }
+                }
             }
 
         } catch (SQLException e) {
@@ -658,6 +675,91 @@ public class ComplaintDAO {
             );
         }
     }
+    // =====================================================
+// GET COMPLAINT BY ID
+// =====================================================
+
+    public Complaint getComplaintById(int complaintId) {
+
+        String sql =
+                "SELECT * FROM complaint " +
+                        "WHERE complaint_id = ?";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql)
+        ) {
+
+            ps.setInt(1, complaintId);
+
+            try (ResultSet rs = ps.executeQuery()) {
+
+                if (rs.next()) {
+
+                    Complaint complaint = new Complaint();
+
+                    complaint.setCitizenId(
+                            rs.getInt("citizen_id")
+                    );
+
+                    complaint.setCategory(
+                            rs.getString("category")
+                    );
+
+                    complaint.setTitle(
+                            rs.getString("title")
+                    );
+
+                    complaint.setDescription(
+                            rs.getString("description")
+                    );
+
+                    complaint.setLocation(
+                            rs.getString("location")
+                    );
+
+                    complaint.setStatus(
+                            rs.getString("status")
+                    );
+
+                    complaint.setPriority(
+                            rs.getString("priority")
+                    );
+
+                    complaint.setSuggestion(
+                            rs.getString("suggestion")
+                    );
+
+                    complaint.setComplaintDate(
+                            rs.getDate("complaint_date")
+                    );
+
+                    complaint.setDepartment(
+                            rs.getString("department")
+                    );
+
+                    complaint.setAiRecommendation(
+                            rs.getString("ai_recommendation")
+                    );
+
+                    return complaint;
+                }
+
+            }
+
+        } catch (SQLException e) {
+
+            System.out.println(
+                    "Unable to retrieve complaint."
+            );
+
+            System.out.println(
+                    "Database Error: " + e.getMessage()
+            );
+        }
+
+        return null;
+    }
 
 
     // =====================================================
@@ -1148,5 +1250,198 @@ public class ComplaintDAO {
                     "Database Error: " + e.getMessage()
             );
         }
+    }
+    // =====================================================
+    // WEB DASHBOARD SUMMARY
+    // =====================================================
+
+    public int[] getDashboardSummary() {
+
+        String sql =
+                "SELECT " +
+                        "COUNT(*) AS total, " +
+                        "SUM(CASE WHEN LOWER(status) = 'pending' " +
+                        "THEN 1 ELSE 0 END) AS pending, " +
+                        "SUM(CASE WHEN LOWER(status) = 'in progress' " +
+                        "THEN 1 ELSE 0 END) AS in_progress, " +
+                        "SUM(CASE WHEN LOWER(status) = 'resolved' " +
+                        "THEN 1 ELSE 0 END) AS resolved, " +
+                        "SUM(CASE WHEN LOWER(priority) = 'high' " +
+                        "THEN 1 ELSE 0 END) AS high_count, " +
+                        "SUM(CASE WHEN LOWER(priority) = 'medium' " +
+                        "THEN 1 ELSE 0 END) AS medium_count, " +
+                        "SUM(CASE WHEN LOWER(priority) = 'low' " +
+                        "THEN 1 ELSE 0 END) AS low_count " +
+                        "FROM complaint";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps =
+                        con.prepareStatement(sql);
+                ResultSet rs =
+                        ps.executeQuery()
+        ) {
+
+            if (rs.next()) {
+
+                return new int[]{
+                        rs.getInt("total"),
+                        rs.getInt("pending"),
+                        rs.getInt("in_progress"),
+                        rs.getInt("resolved"),
+                        rs.getInt("high_count"),
+                        rs.getInt("medium_count"),
+                        rs.getInt("low_count")
+                };
+            }
+
+        } catch (SQLException e) {
+
+            System.out.println(
+                    "Unable to retrieve dashboard summary."
+            );
+
+            System.out.println(
+                    "Database Error: " + e.getMessage()
+            );
+        }
+
+        return new int[]{
+                0, 0, 0, 0, 0, 0, 0
+        };
+    }
+    // =====================================================
+// WEB DASHBOARD - DEPARTMENT COUNTS
+// =====================================================
+
+    public int[] getDepartmentCounts() {
+
+        String sql =
+                "SELECT " +
+                        "SUM(CASE WHEN LOWER(department) LIKE '%traffic%' THEN 1 ELSE 0 END) AS traffic, " +
+                        "SUM(CASE WHEN LOWER(department) LIKE '%waste%' THEN 1 ELSE 0 END) AS waste, " +
+                        "SUM(CASE WHEN LOWER(department) LIKE '%water%' THEN 1 ELSE 0 END) AS water, " +
+                        "SUM(CASE WHEN LOWER(department) LIKE '%electricity%' THEN 1 ELSE 0 END) AS electricity " +
+                        "FROM complaint";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()
+        ) {
+
+            if (rs.next()) {
+
+                return new int[]{
+                        rs.getInt("traffic"),
+                        rs.getInt("waste"),
+                        rs.getInt("water"),
+                        rs.getInt("electricity")
+                };
+            }
+
+        } catch (SQLException e) {
+
+            System.out.println(
+                    "Unable to retrieve department counts."
+            );
+
+            System.out.println(
+                    "Database Error: " + e.getMessage()
+            );
+        }
+
+        return new int[]{0, 0, 0, 0};
+    }
+    // =====================================================
+// WEB DASHBOARD - RECENT COMPLAINTS
+// =====================================================
+
+    public List<Complaint> getRecentComplaints() {
+
+        List<Complaint> complaints = new ArrayList<>();
+
+        String sql =
+                "SELECT complaint_id, citizen_id, category, title, " +
+                        "description, location, status, priority, " +
+                        "suggestion, complaint_date, department, " +
+                        "ai_recommendation " +
+                        "FROM complaint " +
+                        "ORDER BY complaint_id DESC " +
+                        "LIMIT 20";
+
+        try (
+                Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()
+        ) {
+
+            while (rs.next()) {
+
+                Complaint complaint = new Complaint();
+
+                complaint.setComplaintId(
+                        rs.getInt("complaint_id")
+                );
+
+                complaint.setCitizenId(
+                        rs.getInt("citizen_id")
+                );
+
+                complaint.setCategory(
+                        rs.getString("category")
+                );
+
+                complaint.setTitle(
+                        rs.getString("title")
+                );
+
+                complaint.setDescription(
+                        rs.getString("description")
+                );
+
+                complaint.setLocation(
+                        rs.getString("location")
+                );
+
+                complaint.setStatus(
+                        rs.getString("status")
+                );
+
+                complaint.setPriority(
+                        rs.getString("priority")
+                );
+
+                complaint.setSuggestion(
+                        rs.getString("suggestion")
+                );
+
+                complaint.setComplaintDate(
+                        rs.getDate("complaint_date")
+                );
+
+                complaint.setDepartment(
+                        rs.getString("department")
+                );
+
+                complaint.setAiRecommendation(
+                        rs.getString("ai_recommendation")
+                );
+
+                complaints.add(complaint);
+            }
+
+        } catch (SQLException e) {
+
+            System.out.println(
+                    "Unable to retrieve recent complaints."
+            );
+
+            System.out.println(
+                    "Database Error: " + e.getMessage()
+            );
+        }
+
+        return complaints;
     }
 }

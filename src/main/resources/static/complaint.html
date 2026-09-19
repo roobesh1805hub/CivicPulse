@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    ```
+    <title>CivicPulse - Register Complaint</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+            margin: 0;
+            min-height: 100vh;
+            color: #0f172a;
+        }
+
+        .header {
+            background: #0f172a;
+            color: white;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 8px 0 0;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 720px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .title-section h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 25px;
+        }
+
+        .title-section p {
+            color: #64748b;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 15px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            color: #1e3a8a;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            background: #ffffff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .hint {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        button {
+            margin-top: 28px;
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.99);
+        }
+
+        .back {
+            display: block;
+            margin-top: 22px;
+            text-align: center;
+            text-decoration: none;
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                padding: 25px 20px;
+                margin: 25px auto;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .title-section h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+    ```
+
+</head>
+
+<body>
+
+<div class="header">
+
+    ```
+    <h1>🏙️ CivicPulse</h1>
+
+    <p>
+        Citizen Services with Intelligent Issue Tracking
+    </p>
+    ```
+
+</div>
+
+<div class="container">
+
+    ```
+    <div class="title-section">
+
+        <h2>📝 Register a Complaint</h2>
+
+        <p>
+            Report a civic issue and let the system route it to the appropriate department.
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        💡 Your complaint will be automatically assigned to the
+        appropriate department and analyzed for priority.
+
+    </div>
+
+
+    <form action="/api/complaints" method="post">
+
+
+        <label for="citizenId">
+            Citizen ID
+        </label>
+
+        <input
+                type="number"
+                id="citizenId"
+                name="citizenId"
+                min="1"
+                placeholder="Enter your Citizen ID"
+                required
+        >
+
+        <span class="hint">
+        Enter the Citizen ID registered in CivicPulse.
+    </span>
+
+
+        <label for="category">
+            Complaint Category
+        </label>
+
+        <select
+                id="category"
+                name="category"
+                required
+        >
+
+            <option value="">
+                -- Select Category --
+            </option>
+
+            <option value="Traffic">
+                🚦 Traffic
+            </option>
+
+            <option value="Waste">
+                🗑️ Waste
+            </option>
+
+            <option value="Water">
+                💧 Water
+            </option>
+
+            <option value="Electricity">
+                ⚡ Electricity
+            </option>
+
+        </select>
+
+
+        <label for="title">
+            Complaint Title
+        </label>
+
+        <input
+                type="text"
+                id="title"
+                name="title"
+                maxlength="100"
+                placeholder="Example: Water pipeline leakage"
+                required
+        >
+
+        <span class="hint">
+        Keep the title short and specific.
+    </span>
+
+
+        <label for="description">
+            Description
+        </label>
+
+        <textarea
+                id="description"
+                name="description"
+                placeholder="Describe the problem in detail..."
+                required
+        ></textarea>
+
+        <span class="hint">
+        Explain what happened and how it affects the area.
+    </span>
+
+
+        <label for="location">
+            Location
+        </label>
+
+        <input
+                type="text"
+                id="location"
+                name="location"
+                maxlength="100"
+                placeholder="Example: Tambaram"
+                required
+        >
+
+        <span class="hint">
+        Enter the location where the issue was observed.
+    </span>
+
+
+        <button type="submit">
+            🚨 Submit Complaint
+        </button>
+
+    </form>
+
+
+    <a href="/" class="back">
+        ← Back to CivicPulse Home
+    </a>
+
+
+    <div class="footer-note">
+        CivicPulse • Intelligent Citizen Issue Tracking System
+    </div>
+    ```
+
+</div>
+
+</body>
+</html>

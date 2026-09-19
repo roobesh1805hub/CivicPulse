@@ -32,7 +32,7 @@ public class ComplaintService {
 // REGISTER COMPLAINT
 // =====================================================
 
-    public void registerComplaint(Complaint complaint) {
+    public boolean registerComplaint(Complaint complaint) {
 
         System.out.println();
         System.out.println("========== REGISTER COMPLAINT ==========");
@@ -44,7 +44,7 @@ public class ComplaintService {
                     "Invalid complaint details."
             );
 
-            return;
+            return false;
         }
 
 
@@ -61,7 +61,7 @@ public class ComplaintService {
                     "Invalid Citizen ID."
             );
 
-            return;
+            return false;
         }
 
 
@@ -71,7 +71,7 @@ public class ComplaintService {
                     "Citizen ID does not exist. Please register first."
             );
 
-            return;
+            return false;
         }
 
 
@@ -89,7 +89,7 @@ public class ComplaintService {
                     "Complaint category cannot be empty."
             );
 
-            return;
+            return false;
         }
 
         category = category.trim();
@@ -104,7 +104,7 @@ public class ComplaintService {
                     "Invalid complaint category."
             );
 
-            return;
+            return false;
         }
 
 
@@ -144,7 +144,7 @@ public class ComplaintService {
                     "Complaint title cannot be empty."
             );
 
-            return;
+            return false;
         }
 
         title = title.trim();
@@ -155,7 +155,7 @@ public class ComplaintService {
                     "Title cannot exceed 100 characters."
             );
 
-            return;
+            return false;
         }
 
         complaint.setTitle(title);
@@ -175,7 +175,7 @@ public class ComplaintService {
                     "Complaint description cannot be empty."
             );
 
-            return;
+            return false;
         }
 
         description = description.trim();
@@ -197,7 +197,7 @@ public class ComplaintService {
                     "Complaint location cannot be empty."
             );
 
-            return;
+            return false;
         }
 
         location = location.trim();
@@ -208,7 +208,7 @@ public class ComplaintService {
                     "Location cannot exceed 100 characters."
             );
 
-            return;
+            return false;
         }
 
         complaint.setLocation(location);
@@ -224,7 +224,7 @@ public class ComplaintService {
                     "Complaint date cannot be empty."
             );
 
-            return;
+            return false;
         }
 
 
@@ -240,7 +240,7 @@ public class ComplaintService {
                     "Unable to assign department."
             );
 
-            return;
+            return false;
         }
 
         complaint.setDepartment(
@@ -325,7 +325,9 @@ public class ComplaintService {
         // SAVE COMPLAINT
         // =================================================
 
+
         complaintDAO.addComplaint(complaint);
+
 
 
         // =================================================
@@ -373,6 +375,15 @@ public class ComplaintService {
         // =================================================
 
         department.handleComplaint();
+        return true;
+    }
+    // =====================================================
+// GET COMPLAINT BY ID
+// =====================================================
+
+    public Complaint getComplaintById(int complaintId) {
+
+        return complaintDAO.getComplaintById(complaintId);
     }
 
 
